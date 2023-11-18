@@ -46,25 +46,22 @@ int main()
 		case 1:
 			slaves->show(slaves, 7);
 			break;
-		case 2:
-		{
-			cout << "Введите стаж работы от 1 до 22 лет:  ";
+		case 2:	{
+			cout << "Введите стаж работы от 1 до 23 лет:  ";
 			int experience;
 			cin >> experience;
 			Worker temp[7];
 			int count{ 0 };
-			for (size_t i{ 0 }; i < 7; i++)
-			{
-				if (slaves[i].getYear() <= 2023 - experience)
-				{
+			for (size_t i{ 0 }; i < 7; i++)	{
+				if (slaves[i].getYear() <= 2023 - experience) {
 					temp[count++] = slaves[i];
 				}
 			}
 			cout << "Работники со стажем более " << experience << " лет:\n" << endl;
-			slaves->show(temp, count); }
+			slaves->show(temp, count); 			
+		}
 		break;
-		case 3:
-		{
+		case 3: {
 			cout << "Введите зарплату:  ";
 			int zpMore;
 			cin >> zpMore;
@@ -76,26 +73,22 @@ int main()
 				}
 			}
 			cout << "Работники с зарплатой выше " << zpMore << ":\n " << endl;
-			slaves->show(zpSlaves, count);
-		}  break;
-		case 4:
-		{
+			slaves->show(zpSlaves, count);			
+		} break;
+		case 4: {
 			const char* post{ "ИТ" };
 			Worker postSlaves[7];
 			int count = 0;
-			for (size_t i = 0; i < 7; i++)
-			{
-				if (strcmp(slaves[i].getPost(), post) == 0)
-				{
+			for (size_t i = 0; i < 7; i++) {
+				if (strcmp(slaves[i].getPost(), post) == 0) {
 					postSlaves[count++] = slaves[i];
 				}
 			}
 			cout << "Работники с должностью " << post << ":" << endl;
-			slaves->show(postSlaves, count);
-		}
-		break;
+			slaves->show(postSlaves, count);			
+		} break;
 		}
 	} while (choice != 0);
 
-		return 0;
-	}
+	return 0;
+}

@@ -23,10 +23,7 @@ public:
 
 	explicit Worker() : Worker(nullptr, nullptr, year, 0) {};
 
-	~Worker() {
-		delete[] fio;
-		delete[] post;
-	}
+	~Worker() {}
 
 	const char* getFio() const { return fio; }
 
@@ -37,9 +34,5 @@ public:
 	size_t getZp() const { return zp; }
 
 	void show(const Worker* slave, int count) const;
-	void show2() const;
-
-	//void showStazh();
-
 };
 

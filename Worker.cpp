@@ -13,6 +13,3 @@ void Worker::show(const Worker* slave, int count) const {
     }
     cout << endl;
 }
-void Worker::show2() const {
-     cout << "Напишите занимаемую должность: Менеджер, ИТ, Рабочий, Директор" << endl;
-}
