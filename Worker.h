@@ -1,6 +1,8 @@
 ﻿#pragma once
-#include<iostream>
+//#include<iostream>
+
 using namespace std;
+
 class Worker {
 	char* fio;
 	char* post;
